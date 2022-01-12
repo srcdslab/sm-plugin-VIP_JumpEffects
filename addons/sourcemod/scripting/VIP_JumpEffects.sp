@@ -7,7 +7,7 @@
 
 #define pl(%0) for(int %0 = 1; %0 <= MaxClients; ++%0) if(IsClientInGame(%0))
 
-static const char g_sFeature[] = "jump_effect";
+static const char g_sFeature[] = "VIP_JumpEffects";
 
 bool
 	bEnable,
