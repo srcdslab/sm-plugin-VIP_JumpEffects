@@ -1,4 +1,5 @@
 #pragma semicolon 1
+#pragma newdecls required
 
 #include <sdktools_stringtables>
 #include <sdktools_tempents>
@@ -49,7 +50,7 @@ int GetCSGame()
 public Plugin myinfo =
 {
 	name		= "[VIP] Jump Effects",
-	version		= "1.3.0 (rewritten by Grey83)",
+	version		= "1.3.1 (rewritten by Grey83)",
 	description	= "Generate colored beacon when you jump",
 	author		= "Nek.'a 2x2 | ggwp.site",
 	url			= "https://ggwp.site/"
@@ -151,7 +152,7 @@ public void Event_Jump(Event event, const char[] name, bool dontBroadcast)
 	static int client, ver, clr[4];
 	static float pos[3];
 
-	if(!(client = GetClientOfUserId(GetEventInt(event, "userid"))) || !IsClientInGame(client) || !VIP_IsClientVIP(client) || !VIP_IsClientFeatureUse(client, g_sFeature))
+	if(!(client = GetClientOfUserId(event.GetInt("userid"))) || !IsClientInGame(client) || !VIP_IsClientVIP(client) || !VIP_IsClientFeatureUse(client, g_sFeature))
 		return;
 
 	t = GetClientTeam(client) == 2;
