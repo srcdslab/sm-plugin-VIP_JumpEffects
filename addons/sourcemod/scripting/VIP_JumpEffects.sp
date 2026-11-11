@@ -50,7 +50,7 @@ int GetCSGame()
 public Plugin myinfo =
 {
 	name		= "[VIP] Jump Effects",
-	version		= "1.3.1 (rewritten by Grey83)",
+	version		= "1.3.2 (rewritten by Grey83)",
 	description	= "Generate colored beacon when you jump",
 	author		= "Nek.'a 2x2 | ggwp.site",
 	url			= "https://ggwp.site/"
